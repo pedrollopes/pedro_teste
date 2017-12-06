@@ -1,0 +1,21 @@
+<%= form_for(@race) do |f| %>        
+<label for="field1">
+  <span>Motorista </span>
+    <%= collection_select(:race, :driver_id, @driver_options_for_select, :id, :name) %>
+</label>
+
+<label for="field1">
+  <span>Passageiro </span>
+  <%= collection_select(:race, :passenger_id, @passenger_options_for_select, :id, :name) %>
+  
+</label>
+
+<label for="field1">
+  <span>Valor</span> 
+  <%= f.text_field :value, class:"input-field", placeholder:"Ex: 100,00", required: "true" %>
+</label>
+
+  <label><%= f.submit "Enviar", class: "button" %></label>
+  <label><%= link_to t('buttons.back'), races_path, class: "button" %></label>
+  
+  <% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: 9.99
+  driver: one
+  passenger: one
+
+two:
+  value: 9.99
+  driver: two
+  passenger: two

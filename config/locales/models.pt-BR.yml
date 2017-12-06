@@ -1,0 +1,27 @@
+"pt-BR":
+  activerecord:
+    models:
+     driver:
+       one: Motorista
+       other: Motoristas
+     passenger:
+       one: Passageiro
+       other: Passageiros
+     race:
+       one: Corrida
+       other: Corridas
+    attributes:
+      driver:
+        name: "Nome"
+        birth: "Data de Nascimento"
+        cpf: "CPF"
+        car_model: "Modelo do Carro"
+        status: "Status"
+        sex: "Sexo"
+      passenger:
+        name: "Nome"
+        birth: "Data de Nascimento"
+        cpf: "CPF"
+        sex: "Sexo"
+      race:
+        value: "Valor"

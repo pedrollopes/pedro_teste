@@ -1,0 +1,51 @@
+  <div class="form-style-9 index_list_contact">
+    
+      <script>
+        $.notify("<%= notice %>","success")  
+      </script>
+      
+      <h1><%= "#{t('messages.listing')}  #{@drivers.model_name.human(count: @drivers.count)}" %></h1>
+      
+      <table>
+        <thead>
+          <tr>
+            <th><%= @drivers.human_attribute_name("name") %></th>
+            <th><%= @drivers.human_attribute_name("birth") %></th>  
+            <th><%= @drivers.human_attribute_name("CPF") %></th>            
+            <th><%= @drivers.human_attribute_name("car") %></th>
+            <th><%= @drivers.human_attribute_name("status") %></th>
+            <th><%= @drivers.human_attribute_name("sex") %></th>
+            
+
+            <th colspan="6"></th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <% @drivers.each do |driver| %>
+            <tr>
+              <td><%= driver.name %></td>
+              <td><%= driver.birth %></td>     
+              <td><%= driver.cpf %></td>              
+              <td><%= driver.car_model %></td>
+              <td><%= driver.status %></td>
+              <td><%= driver.sex %></td>
+
+        
+
+              <td><%= link_to t('buttons.edit'), edit_driver_path(driver) %> </td>
+              <td><%= link_to t('buttons.destroy'), driver, method: :delete, data: { confirm: t('messages.confirm') } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <br>
+      <%= will_paginate @drivers %>
+      <br>
+
+      <%= link_to t('buttons.new'), new_driver_path, class: "button"%>
+      <%= link_to t('buttons.back'), root_path, class: "button" %>
+      
+    </div>
+
+    

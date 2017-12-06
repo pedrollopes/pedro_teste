@@ -1,0 +1,40 @@
+<div class="form-style-9 index_list_contact">
+    
+      <script>
+        $.notify("<%= notice %>","success")  
+      </script>
+      
+      <h1><%= "#{t('messages.listing')}  #{@races.model_name.human(count: @races.count)}" %></h1>
+      
+      <table>
+        <thead>
+          <tr>
+            <th><%= @races.human_attribute_name("Driver") %></th>  
+            <th><%= @races.human_attribute_name("Passenger") %></th>            
+            <th><%= @races.human_attribute_name("Value") %></th>
+
+            <th colspan="4"></th>
+          </tr>
+        </thead>
+     
+        <tbody>
+          <% @races.each do |race| %>
+            <tr>
+              <td><%= race.driver.name %></td>
+              <td><%= race.passenger.name %></td>     
+              <td><%= race.value %></td>  
+
+              <td><%= link_to t('buttons.edit'), edit_race_path(race) %> </td>
+              <td><%= link_to t('buttons.destroy'), race, method: :delete, data: { confirm: t('messages.confirm') } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <br>
+      <%= will_paginate @races %>
+      <br>
+
+      <%= link_to t('buttons.new'), new_race_path, class: "button"%>
+      <%= link_to t('buttons.back'), root_path, class: "button" %>
+      
+    </div>

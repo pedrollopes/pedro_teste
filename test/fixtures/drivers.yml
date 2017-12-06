@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  birth: 2017-12-04
+  cpf: 1
+  car_model: MyString
+  status: MyString
+  sex: MyString
+
+two:
+  name: MyString
+  birth: 2017-12-04
+  cpf: 1
+  car_model: MyString
+  status: MyString
+  sex: MyString
